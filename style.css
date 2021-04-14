@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  width: 100%;
+  width: 90%;
 }
 .overlay {
   position: absolute;
@@ -8,9 +8,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 93%;
-  width: 83%;
-  margin-left: 8.5%;
+  height: 95%;
+  width: 100%;
   opacity: 0;
   transition: 0.5s ease;
   background-color: #21434e;
@@ -23,7 +22,7 @@
 .item-cat,
 .item-title {
   font-family: "Bebas Neue", cursive;
-  font-size: 2rem;
+  font-size: 30px;
 }
 
 .text {
@@ -131,6 +130,10 @@ body {
   .modal-content {
     width: 100%;
   }
+}
+
+.row {
+  margin-bottom: 100px;
 }
 /*social media*/
 #lab_social_icon_footer {
