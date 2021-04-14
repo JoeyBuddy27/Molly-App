@@ -286,11 +286,22 @@
     var captionText = document.getElementById("caption");
     const titleText = document.getElementById("modal-title");
 
-    img.ondblclick = function () {
-      modal.style.display = "block";
-      modalImg.src = display.src;
-      captionText.innerHTML = display.alt;
-      titleText.innerHTML = display.title;
+    // img.ondblclick = function () {
+    //   modal.style.display = "block";
+    //   modalImg.src = display.src;
+    //   captionText.innerHTML = display.alt;
+    //   titleText.innerHTML = display.title;
+    // };
+
+    // new click thing test
+
+    img.onmouseenter = function () {
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = display.src;
+        captionText.innerHTML = display.alt;
+        titleText.innerHTML = display.title;
+      };
     };
 
     img2.ondblclick = function () {
