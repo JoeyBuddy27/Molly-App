@@ -167,7 +167,7 @@
   }
   .modal-container {
     flex-direction: column !important;
-    background: blue !important;
+    /* background: blue !important; */
     display: block;
   }
 }
