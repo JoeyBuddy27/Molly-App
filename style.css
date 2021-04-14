@@ -42,10 +42,6 @@
   display: none;
 }
 
-body {
-  /*background-image: url('images/immagine2-1.jpg');*/
-}
-
 #myImg {
   border-radius: 5px;
   cursor: pointer;
@@ -67,13 +63,6 @@ body {
   padding: 20px;
   opacity: 1;
   background-color: rgba(0, 0, 0, 1); /* Black w/ opacity */
-}
-
-@media only screen and (max-width: 600px) {
-  .modal-container {
-    display: block;
-    flex-direction: column;
-  }
 }
 
 #modal-title {
@@ -175,6 +164,11 @@ body {
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
+  }
+  .modal-container {
+    flex-direction: column !important;
+    background: blue !important;
+    display: block;
   }
 }
 
