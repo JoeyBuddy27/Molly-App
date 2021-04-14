@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<head>
+    <title>Molly's</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+
+.container {
+  position: relative;
+  
+  width:100%;
+  
+}
+ .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #21434e;
+}
+
+.container:hover .overlay {
+  opacity: 0.9;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+      
+      body{
+        /*background-image: url('images/immagine2-1.jpg');*/
+  
+      }
+
+      #myImg  {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg :hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/*social media*/
+#lab_social_icon_footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+   padding:20px;
+  background-color: #dedede;
+}
+
+#lab_social_icon_footer a {
+  color: #333;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+/*
+    Multicoloured Hover Variations
+*/
+
+#lab_social_icon_footer #social-fb:hover {
+  color: #3B5998;
+}
+
+#lab_social_icon_footer #social-tw:hover {
+  color: #4099FF;
+}
+
+#lab_social_icon_footer #social-gp:hover {
+  color: #d34836;
+}
+
+#lab_social_icon_footer #social-em:hover {
+  
+  color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+    </style>
+    
+</head>
+<body>
+    <!-- Gallery -->
+
+<div class="row" style='margin-top:5%;'>
+
+    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+      
+      <div class="container" id="myImg" style='  touch-action: manipulation;
+      '>
+      <img  id="display" src="images/imag_2.PNG"  class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom " alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." >
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Design</span>                    
+          <span class="item-title">Nendo’s N Bottle</span>
+        </div>
+      </div>
+     
+    
+    </div>
+  
+  
+    
+    
+<!-- The Modal -->
+
+<div class="container" id="myImg2"style=' touch-action: manipulation;'>
+      <img id="display2" src="images/image_1.png"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+    
+        <div class="overlay">
+          <div class="text">
+            <span class="item-cat">Branding</span>                    
+                                <span class="item-title">Berger Identity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+    
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+    
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"> </div>
+    </div>
+
+  
+    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+      <div class="container" id="myImg3" style='touch-action: manipulation;'>
+      <img id="display3"
+        src="images/image_4.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Design</span>                    
+                                <span class="item-title">BeoPlay Headphones</span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <img id="myImg4"
+        src="images/logo.png"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-opacity"
+ .       style='margin-top:20%; touch-action: manipulation;'
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      
+   
+    </div>
+  
+    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+      <div class="container" id="myImg5" style='touch-action: manipulation;'>
+      <img id="display5"
+        src="images/image_5.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Design</span>                    
+                                <span class="item-title">BeoPlay Headphones</span>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="myImg6" style='touch-action: manipulation;'>
+      <img id="display6"
+        src="images/image_6.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Photography</span>                    
+                                <span class="item-title">Guilty Brotherhood</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+      <div class="container" id="myImg7" style='touch-action: manipulation;'>
+      <img id="display7" src="images/image_7.PNG" class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." >
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Web Design</span>                    
+                                <span class="item-title">High-res Icon Set</span>
+        </div>
+      </div>
+    </div>
+<!-- The Modal -->
+
+<div class="container" id="myImg8" style='touch-action: manipulation;'>
+      <img id="display8" src="images/image_8.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+        <div class="overlay">
+          <div class="text">
+            <span class="item-cat">Photography</span>                    
+            <span class="item-title">Chrome Nudes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+    
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="img01">
+    
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"> </div>
+    </div>
+    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+      <div class="container" id="myImg9" style='touch-action: manipulation;'>
+        
+      <img id="display9"
+        src="images/image_9.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Branding</span>                    
+                                <span class="item-title">Stationery Mockup</span>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="myImg10" style='touch-action: manipulation;'>
+      <img id="display10"
+        src="images/image_10.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Product design</span>                    
+                                <span class="item-title">Thaw Armchair</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-4 mb-4 mb-lg-0">
+      <div class="container" id="myImg11" style='touch-action: manipulation;' >
+      <img id="display11"
+        src="images/image 28.jpg" 
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="dLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Photography</span>                    
+                                <span class="item-title">Louboutin Pigalle</span>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="myImg12"  style='touch-action: manipulation;'>
+      <img id="display12"
+        src="images/image_12.PNG"
+        class="w-100 shadow-1-strong rounded mb-4 w3-container w3-center w3-animate-zoom"
+        alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      />
+      <div class="overlay">
+        <div class="text">
+          <span class="item-cat">Design</span>                    
+                                <span class="item-title">D&amp;G Eyewear</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <section id="lab_social_icon_footer">
+    <!-- Include Font Awesome Stylesheet in Header -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+            <div class="text-center center-block">
+                    <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                  <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                  <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fab fa-pinterest-square fa-3x social"></i></a>
+                  <a href="mailto:#"><i id="social-em" class="fab fa-instagram-square fa-3x social"></i></a>
+        </div>
+    </div>
+    </section>
+
+  <!-- Gallery -->
+  <script>
+    var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var img2=document.getElementById("myImg2");
+var img3=document.getElementById("myImg3");
+var img4=document.getElementById("myImg4");
+var img5=document.getElementById("myImg5");
+var img6=document.getElementById("myImg6");
+var img7=document.getElementById("myImg7");
+var img8=document.getElementById("myImg8");
+var img9=document.getElementById("myImg9");
+var img10=document.getElementById("myImg10");
+var img11=document.getElementById("myImg11");
+var img12=document.getElementById("myImg12");
+var display=document.getElementById("display");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+
+img.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display.src;
+captionText.innerHTML = display2.alt;
+}
+
+
+img2.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display2.src;
+captionText.innerHTML = display2.alt;
+}
+img3.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display3.src;
+captionText.innerHTML = display3.alt;
+}
+img4.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display4.src;
+captionText.innerHTML = display4.alt;
+}
+img5.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display5.src;
+captionText.innerHTML = display5.alt;
+}
+img6.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display6.src;
+captionText.innerHTML = display6.alt;
+}
+img7.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display7.src;
+captionText.innerHTML = display7.alt;
+}
+img8.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display8.src;
+captionText.innerHTML = display8.alt;
+}
+img9.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display9.src;
+captionText.innerHTML = display9.alt;
+}
+img10.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display10.src;
+captionText.innerHTML = display10.alt;
+}
+img11.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display11.src;
+captionText.innerHTML = display11.alt;
+}
+img12.ondblclick = function(){
+modal.style.display = "block";
+modalImg.src = display12.src;
+captionText.innerHTML = display12.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+modal.style.display = "none";
+}
+  </script>
+</body>
