@@ -56,6 +56,26 @@ body {
   opacity: 0.7;
 }
 
+.modal-container {
+  display: flex;
+  margin: 0px auto;
+  justify-content: center;
+  width: 900px;
+  max-width: 80%;
+  /* border: 1px solid white;
+  border-radius: 10px; */
+  padding: 20px;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 1); /* Black w/ opacity */
+}
+
+#modal-title {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-family: "Bebas Neue", cursive;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -77,6 +97,25 @@ body {
   display: block;
   width: 80%;
   max-width: 700px;
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.modal-contact {
+  background: pink;
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+  margin: 0px auto;
+  font-family: Verdana;
+}
+
+.modal-contact > h3 {
+  font-family: "Bebas Neue", cursive;
+}
+
+.modal-right {
+  font-size: 12px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -88,7 +127,7 @@ body {
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 150px;
+  /* height: 150px; */
 }
 
 /* Add Animation - Zoom in the Modal */
