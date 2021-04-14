@@ -16,7 +16,15 @@
 }
 
 .container:hover .overlay {
-  /* opacity: 0.9; */
+  opacity: 0.9;
+}
+
+.see-more-button {
+  border: none;
+  color: white;
+  background: pink;
+  padding: 10px;
+  opacity: 1;
 }
 
 .item-cat,
@@ -49,7 +57,7 @@
 }
 
 #myImg :hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .modal-container {
