@@ -69,6 +69,13 @@ body {
   background-color: rgba(0, 0, 0, 1); /* Black w/ opacity */
 }
 
+@media only screen and (max-width: 600px) {
+  .modal-container {
+    display: block;
+    flex-direction: column;
+  }
+}
+
 #modal-title {
   text-align: center;
   font-size: 50px;
