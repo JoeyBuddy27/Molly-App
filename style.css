@@ -254,3 +254,11 @@
   background-clip: text;
   -webkit-background-clip: text;
 }
+
+@media only screen and (orientation: portrait) {
+  .main-col {
+    width: 33%;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+}
